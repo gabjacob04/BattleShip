@@ -1,7 +1,7 @@
 ﻿
 namespace BattleShip
 {
-    partial class Form1
+    partial class Frm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,49 +39,63 @@ namespace BattleShip
             // 
             // ptbTirsAdverses
             // 
-            this.ptbTirsAdverses.Location = new System.Drawing.Point(12, 327);
+            this.ptbTirsAdverses.Location = new System.Drawing.Point(11, 279);
+            this.ptbTirsAdverses.Margin = new System.Windows.Forms.Padding(2);
             this.ptbTirsAdverses.Name = "ptbTirsAdverses";
-            this.ptbTirsAdverses.Size = new System.Drawing.Size(314, 259);
+            this.ptbTirsAdverses.Size = new System.Drawing.Size(201, 201);
             this.ptbTirsAdverses.TabIndex = 1;
             this.ptbTirsAdverses.TabStop = false;
+            this.ptbTirsAdverses.Paint += new System.Windows.Forms.PaintEventHandler(this.ptbTirsAdverses_Paint);
             // 
             // lblAdverse
             // 
             this.lblAdverse.AutoSize = true;
-            this.lblAdverse.Location = new System.Drawing.Point(12, 307);
+            this.lblAdverse.Location = new System.Drawing.Point(11, 264);
+            this.lblAdverse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdverse.Name = "lblAdverse";
-            this.lblAdverse.Size = new System.Drawing.Size(116, 17);
+            this.lblAdverse.Size = new System.Drawing.Size(86, 13);
             this.lblAdverse.TabIndex = 2;
             this.lblAdverse.Text = "Les tirs adverses";
             // 
             // lblJoueur
             // 
             this.lblJoueur.AutoSize = true;
-            this.lblJoueur.Location = new System.Drawing.Point(12, 18);
+            this.lblJoueur.Location = new System.Drawing.Point(9, 7);
+            this.lblJoueur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJoueur.Name = "lblJoueur";
-            this.lblJoueur.Size = new System.Drawing.Size(55, 17);
+            this.lblJoueur.Size = new System.Drawing.Size(41, 13);
             this.lblJoueur.TabIndex = 3;
             this.lblJoueur.Text = "Vos tirs";
             // 
             // ptbTirsJoueur
             // 
-            this.ptbTirsJoueur.Location = new System.Drawing.Point(12, 38);
+            this.ptbTirsJoueur.Location = new System.Drawing.Point(11, 22);
+            this.ptbTirsJoueur.Margin = new System.Windows.Forms.Padding(2);
             this.ptbTirsJoueur.Name = "ptbTirsJoueur";
-            this.ptbTirsJoueur.Size = new System.Drawing.Size(314, 266);
+            this.ptbTirsJoueur.Size = new System.Drawing.Size(201, 201);
             this.ptbTirsJoueur.TabIndex = 4;
             this.ptbTirsJoueur.TabStop = false;
+            this.ptbTirsJoueur.Paint += new System.Windows.Forms.PaintEventHandler(this.ptbTirsJoueur_Paint);
+            this.ptbTirsJoueur.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ptbTirsJoueur_MouseUp);
             // 
-            // Form1
+            // Frm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 613);
+            this.ClientSize = new System.Drawing.Size(223, 491);
             this.Controls.Add(this.ptbTirsJoueur);
             this.Controls.Add(this.lblJoueur);
             this.Controls.Add(this.lblAdverse);
             this.Controls.Add(this.ptbTirsAdverses);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Frm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "Battleship";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbTirsAdverses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTirsJoueur)).EndInit();
             this.ResumeLayout(false);
